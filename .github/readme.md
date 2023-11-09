@@ -66,7 +66,7 @@ Página de Detalhes dos filmes:
 
 <h2 id="usage">💡 Utilização</h2>
 
-A aplicação RocketMovies está disponível para utilização [aqui](https://rocket-movies-app.netlify.app/).
+A aplicação RocketMovies está disponível para utilização [aqui](https://elizandramonteiro.github.io/zandanotes/).
 
 Você também pode instalá-la em sua máquina localmente. Para isso, clone o projeto, acesse a pasta, instale as dependências e inicie o servidor.
 
