@@ -1,4 +1,4 @@
-<h1 align="center"> RocketMovies </h1>
+<h1 align="center"> Zânda Movies </h1>
 
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -27,7 +27,7 @@ A aplicação apresenta as seguintes funcionalidades:
 - Mostrar perfil;
 - Atualizar perfil;
 - Cadastrar filmes;
-- Mostrar filmes cadastradas;
+- Mostrar filmes cadastrados;
 - Filtrar filmes;
 - Mostrar detalhes do filme;
 - Excluir filme;
@@ -71,7 +71,7 @@ A aplicação RocketMovies está disponível para utilização [aqui](https://ro
 Você também pode instalá-la em sua máquina localmente. Para isso, clone o projeto, acesse a pasta, instale as dependências e inicie o servidor.
 
 ```
-$ git clone https://github.com/madalena-rocha/rocket-movies
+$ git clone https://elizandramonteiro.github.io/zandanotes/
 $ cd rocket-movies
 $ npm install
 $ npm run dev
