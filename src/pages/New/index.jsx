@@ -1,143 +1,165 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState } from "react";
+import { FiArrowLeft } from "react-icons/fi";
 
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
+import { ButtonText } from "../../components/ButtonText";
 import { Textarea } from "../../components/Textarea";
-import { NoteItem } from "../../components/NoteItem";
+import { MovieItem } from "../../components/MovieItem";
 import { Section } from "../../components/Section";
 import { Button } from "../../components/Button";
 import { Header } from "../../components/Header";
 import { Input } from "../../components/Input";
 
-import { api } from '../../services/api';
+import { api } from "../../services/api";
 
 import { Container, Form } from "./styles";
 
 export function New() {
   const [title, setTitle] = useState("");
+  const [rating, setRating] = useState("");
   const [description, setDescription] = useState("");
-
-  const [links, setLinks] = useState([]);
-  const [newLink, setNewLink] = useState("");
 
   const [tags, setTags] = useState([]);
   const [newTag, setNewTag] = useState("");
 
+  const [loading, setLoading] = useState(false);
+
   const navigate = useNavigate();
 
-  function handleAddLink() {
-    setLinks(prevState => [...prevState, newLink]);
-    setNewLink("");
-  }
-
-  function handleRemoveLink(deleted) {
-    setLinks(prevState => prevState.filter(link => link !== deleted));
+  function handleBack() {
+    navigate(-1);
   }
 
   function handleAddTag() {
-    setTags(prevState => [...prevState, newTag]);
+    setTags((prevState) => [...prevState, newTag]);
     setNewTag("");
   }
 
   function handleRemoveTag(deleted) {
-    setTags(prevState => prevState.filter(tag => tag !== deleted));
+    setTags((prevState) => prevState.filter((tag) => tag !== deleted));
   }
 
-  async function handleNewNote() {
-    if (!title) {
-      return alert("Digite o título da nota");
+  async function handleNewMovie() {
+    setLoading(true);
+
+    try {
+      if (!title) {
+        return alert("Digite o título do filme");
+      }
+
+      const isRatingValid = rating >= 0 && rating <= 5;
+
+      if (!isRatingValid) {
+        return alert("A nota do filme deve ser entre 0 e 5");
+      }
+
+      if (newTag) {
+        return alert(
+          "Você deixou uma tag no campo para adicionar, mas não clicou em adicionar. Clique para adicionar ou deixe o campo vazio."
+        );
+      }
+
+      await api.post("/notes", {
+        title,
+        description,
+        rating,
+        tags,
+      });
+
+      alert("Filme adicionado com sucesso!");
+      navigate(-1);
+    } catch (error) {
+      if (error.response) {
+        alert(error.response.data.message);
+      } else {
+        alert("Não foi possível adicionar o filme.");
+        console.log("Erro ao adicionar o filme:", error);
+      }
+    } finally {
+      setLoading(false);
     }
-
-    if (newLink) {
-      return alert("Você deixou um link no campo para adicionar, mas não clicou em adicionar. Clique para adicionar ou deixe o campo vazio.");
-    }
-
-    if (newTag) {
-      return alert("Você deixou uma tag no campo para adicionar, mas não clicou em adicionar. Clique para adicionar ou deixe o campo vazio.");
-    }
-
-    await api.post("/notes", {
-      title,
-      description,
-      tags,
-      links
-    });
-
-    alert("Nota criada com sucesso!");
-    navigate("/");
   }
 
+  function handleDiscardMovie() {
+    const userConfirmation = confirm(
+      "Todas as alterações serão perdidas... Tem certeza que deseja descartar as alterações?"
+    );
+
+    if (userConfirmation) {
+      navigate(-1);
+    }
+  }
 
   return (
     <Container>
-      <Header />
+      <Header>
+        <Input placeholder="Pesquisar pelo título" />
+      </Header>
 
       <main>
         <Form>
           <header>
-            <h1>Criar nota</h1>
-            <Link to="/">voltar</Link>
+            <ButtonText onClick={handleBack}>
+              <FiArrowLeft />
+              Voltar
+            </ButtonText>
+
+            <h1>Novo filme</h1>
           </header>
 
-          <Input
-            placeholder="Título"
-            onChange={e => setTitle(e.target.value)}
-          />
+          <div>
+            <Input
+              placeholder="Título"
+              onChange={(e) => setTitle(e.target.value)}
+            />
+
+            <Input
+              placeholder="Sua nota (de 0 a 5)"
+              type="number"
+              min="0"
+              max="5"
+              value={rating}
+              onChange={(e) => setRating(e.target.value)}
+            />
+          </div>
 
           <Textarea
             placeholder="Observações"
-            onChange={e => setDescription(e.target.value)}
+            onChange={(e) => setDescription(e.target.value)}
           />
-
-          <Section title="Links úteis">
-            {
-              links.map((link, index) => (
-                <NoteItem
-                  key={String(index)}
-                  value={link}
-                  onClick={() => handleRemoveLink(link)}
-                />
-              ))
-            }
-            <NoteItem
-              isNew
-              placeholder="Novo link"
-              value={newLink}
-              onChange={e => setNewLink(e.target.value)}
-              onClick={handleAddLink}
-            />
-          </Section>
 
           <Section title="Marcadores">
             <div className="tags">
-              {
-                tags.map((tag, index) => (
-                  <NoteItem
-                    key={String(index)}
-                    value={tag}
-                    onClick={() => handleRemoveTag(tag)}
-                  />
-                ))
-              }
+              {tags.map((tag, index) => (
+                <MovieItem
+                  key={String(index)}
+                  value={tag}
+                  onClick={() => handleRemoveTag(tag)}
+                />
+              ))}
 
-              <NoteItem
+              <MovieItem
                 isNew
-                placeholder="Nova tag"
-                onChange={e => setNewTag(e.target.value)}
+                placeholder="Novo marcador"
+                onChange={(e) => setNewTag(e.target.value)}
                 value={newTag}
                 onClick={handleAddTag}
               />
             </div>
           </Section>
 
-          <Button
-            title="Salvar"
-            onClick={handleNewNote}
-          />
+          <div>
+            <Button title="Descartar alterações" onClick={handleDiscardMovie} />
 
+            <Button
+              title="Salvar alterações"
+              onClick={handleNewMovie}
+              loading={loading}
+            />
+          </div>
         </Form>
       </main>
-    </Container >
+    </Container>
   );
 }

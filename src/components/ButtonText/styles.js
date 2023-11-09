@@ -2,14 +2,14 @@ import styled from "styled-components";
 
 export const Container = styled.button`
   background: none;
-  color: ${({ theme, $isactive }) =>
-    $isactive ? theme.COLORS.ORANGE : theme.COLORS.GRAY_100};
-  // se tiver ativo, cor laranja, senão, cor cinza
-
   border: none;
-  font-size: 1.6rem;
 
-  &:disabled {
-    opacity: 0.5;
-  }
+  font-size: 1.6rem;
+  color: ${({ theme }) => theme.COLORS.PINK};
+
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  margin-bottom: 2.4rem;
 `;

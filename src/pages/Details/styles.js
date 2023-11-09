@@ -1,54 +1,93 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
   height: 100vh;
-  
-  display: grid; 
-  grid-template-rows: 105px auto; 
-  grid-template-areas: 
+
+  display: grid;
+  grid-template-rows: 11.6rem auto;
+  grid-template-areas:
     "header"
     "content";
 
   > main {
     grid-area: content;
-    overflow-y: scroll;
-    padding: 64px 0;   
-  }
-`;
+    overflow-y: auto;
 
-export const Links = styled.ul`
-  list-style-type: none;
+    width: 100%;
+    max-width: 113.7rem;
+    margin: 4rem auto;
 
-  > li {
-    margin-top: 12px;
-    
-    a {
+    header {
+      display: flex;
+      flex-direction: column;
+
+      margin-bottom: 4rem;
+
+      button {
+        background: none;
+        border: none;
+      }
+
+      div {
+        display: flex;
+        align-items: center;
+      }
+
+      .movie-info {
+        gap: 0.8rem;
+        margin-top: 2.4rem;
+
+        p:nth-child(1),
+        div {
+          display: flex;
+          align-items: center;
+          gap: 0.8rem;
+        }
+
+        img {
+          width: 1.6rem;
+          height: 1.6rem;
+          border-radius: 50%;
+        }
+
+        svg {
+          color: ${({ theme }) => theme.COLORS.PINK};
+        }
+      }
+
+      h1 {
+        font-weight: 500;
+        font-size: 3.6rem;
+        margin-right: 1.9rem;
+      }
+    }
+
+    > p {
+      text-align: justify;
       color: ${({ theme }) => theme.COLORS.WHITE};
+
+      margin-top: 4rem;
+      max-width: calc(100% - 0.8rem);
+
+      line-height: 2.1rem;
+    }
+
+    button {
+      background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+      color: ${({ theme }) => theme.COLORS.PINK};
+
+      width: calc(50% - 2rem);
+      margin-top: 4rem;
     }
   }
-`;
 
-export const Content = styled.div`
-  max-width: 550px;
-  margin: 0 auto;
-
-  display: flex;
-  flex-direction: column;
-
-  > button:first-child {
-    align-self: end;
+  > main::-webkit-scrollbar {
+    width: 0.8rem;
   }
 
-  > h1 {
-    font-size: 36px;
-    font-weight: 500;
-    padding-top: 64px;  
-  }
-  
-  > p {
-    font-size: 16px;
-    margin-top: 16px;
-    text-align: justify;
+  > main::-webkit-scrollbar-thumb {
+    background-color: ${({ theme }) => theme.COLORS.PINK};
+    border-radius: 0.8rem;
   }
 `;

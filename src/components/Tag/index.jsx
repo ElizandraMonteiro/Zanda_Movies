@@ -5,5 +5,5 @@ export function Tag({ title, ...rest }) {
     <Container {...rest}>
       {title}
     </Container>
-  ); // ...rest para incluir a Tag key
+  );
 }
