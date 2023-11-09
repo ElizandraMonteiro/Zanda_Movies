@@ -21,7 +21,7 @@ export function Header({ children }) {
   return (
     <Container>
       <Brand>
-        <h1>RocketMovies</h1>
+        <h1>Zânda Movies</h1>
       </Brand>
 
       <Search>{children}</Search>

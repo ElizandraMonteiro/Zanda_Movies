@@ -1,29 +1,22 @@
 <h1 align="center"> RocketMovies </h1>
 
-> Stage 09: Frontend - Explorer
-
 <p align="center">
-  <a href="#project">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#pages">Páginas</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+   <a href="#project">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#features">Funcionalidades</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#technologies">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#usage">Utilização</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#license">Licença</a>
 </p>
 
-<p align="center">
-  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000">
-</p>
-
 <h2 id="project">📁 Projeto</h2>
 
-Frontend do projeto RocketMovies, sua aplicação para acompanhar tudo que assistir!
+<p>
+  Projeto onde trabalhei o Front End com ReactJS. Aplicação para acompanhar tudo que quiser assistir, você  pode criar sua conta no site e cadastrar notas onde pode colocar nota e descrição do filme que assistiu.
+</p>
 
-<h2 id="pages">📃 Páginas</h2>
-
-A aplicação conta com páginas de login, cadastro, visualizar filme, perfil e cadastrar filme.
-
-!["Página home"](./src/assets/home.png)
+<br>
+<br>
 
 <h2 id="features">🛠️ Funcionalidades</h2>
 
@@ -40,9 +33,9 @@ A aplicação apresenta as seguintes funcionalidades:
 - Excluir filme;
 - Logout.
 
-<h2 id="technologies">💻 Tecnologias</h2>
+## 🚀 Tecnologias
 
-Este projeto foi desenvolvido com as seguintes tecnologias:
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - ViteJS;
 - ReactJS;
@@ -51,6 +44,26 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 - React Router;
 - Axios.
 
+
+<br>
+<br>
+
+## 🔖 Layout
+Página de SingIn:
+![prewiew](01singin.PNG)
+Página de SingUp:
+![prewiew](02singup.PNG)
+Página de Home:
+![prewiew](03home.PNG)
+Página de Novos Filmes:
+![prewiew](04new.PNG)
+Página de Perfil:
+![prewiew](05profile.PNG)
+Página de Detalhes dos filmes:
+![prewiew](06details.PNG)
+
+---
+
 <h2 id="usage">💡 Utilização</h2>
 
 A aplicação RocketMovies está disponível para utilização [aqui](https://rocket-movies-app.netlify.app/).
@@ -58,7 +71,7 @@ A aplicação RocketMovies está disponível para utilização [aqui](https://ro
 Você também pode instalá-la em sua máquina localmente. Para isso, clone o projeto, acesse a pasta, instale as dependências e inicie o servidor.
 
 ```
-$ git clone https://github.com/ElizandraMonteiro/rocket-movies
+$ git clone https://github.com/madalena-rocha/rocket-movies
 $ cd rocket-movies
 $ npm install
 $ npm run dev
@@ -72,4 +85,4 @@ Esse projeto está sob a licença MIT.
 
 ---
 
-Feito com ❤️ by Elizandra Monteiro 👋 
+Feito com ❤️ by Elizândra Monteiro 👋
