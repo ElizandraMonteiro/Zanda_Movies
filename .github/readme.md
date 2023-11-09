@@ -5,7 +5,6 @@
    <a href="#project">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#features">Funcionalidades</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#technologies">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#usage">Utilização</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#license">Licença</a>
 </p>
 
@@ -63,19 +62,6 @@ Página de Detalhes dos filmes:
 ![prewiew](06details.PNG)
 
 ---
-
-<h2 id="usage">💡 Utilização</h2>
-
-A aplicação RocketMovies está disponível para utilização [aqui](https://elizandramonteiro.github.io/zandanotes/).
-
-Você também pode instalá-la em sua máquina localmente. Para isso, clone o projeto, acesse a pasta, instale as dependências e inicie o servidor.
-
-```
-$ git clone https://elizandramonteiro.github.io/zandanotes/
-$ cd rocket-movies
-$ npm install
-$ npm run dev
-```
 
 ⚠️ **Importante**: Este projeto está utilizando uma hospedagem gratuita para o seu backend, portanto, pode haver atrasos no tempo de resposta do servidor.
 
