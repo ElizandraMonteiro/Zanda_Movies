@@ -1,3 +1,4 @@
+
 import { useNavigate } from "react-router-dom";
 import { Container, Brand, Search, Profile, Logout } from "./styles";
 import { useAuth } from "../../hooks/auth";
@@ -35,6 +36,8 @@ export function Header({ children }) {
       </Profile>
 
       <Logout onClick={handleSignOut}>sair</Logout>
+      
+
     </Container>
   );
 }
