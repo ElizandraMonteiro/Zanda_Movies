@@ -24,8 +24,7 @@ export function SignUp() {
 
     setLoading(true);
 
-    api
-      .post("/users", { name, email, password })
+    api.post("/users", { name, email, password })
       .then(() => {
         alert("Usuário cadastrado com sucesso!");
         navigate(-1);
