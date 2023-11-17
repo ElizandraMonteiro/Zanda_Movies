@@ -14,7 +14,7 @@ export function AppRoutes() {
       <Route path="/profile" element={<Profile />} />
       <Route path="/details/:id" element={<Details />} />
 
-      {! user &&<Route path= "*" element={<Navigate to="/"/>} />}
+      
     </Routes>
   );
 }

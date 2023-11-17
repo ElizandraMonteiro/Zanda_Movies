@@ -22,6 +22,7 @@ export function Home() {
   useEffect(() => {
     async function fetchMovies() {
       const response = await api.get(`/notes?title=${search}`);
+      console.log(response)
       setMovies(response.data);
     }
 
@@ -48,7 +49,7 @@ export function Home() {
         </header>
 
         <Content>
-          {movies.map((movie) => (
+          {movies.map(movie => (
             <Movie
               key={String(movie.id)}
               data={movie}
@@ -56,6 +57,7 @@ export function Home() {
             />
           ))}
         </Content>
+
       </main>
     </Container>
   );
