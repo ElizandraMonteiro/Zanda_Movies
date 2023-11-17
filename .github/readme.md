@@ -11,10 +11,8 @@
 <h2 id="project">📁 Projeto</h2>
 
 <p>
-  Projeto onde trabalhei o Front End com ReactJS. Aplicação para acompanhar tudo que quiser assistir, você  pode criar sua conta no site e cadastrar notas onde pode colocar nota e descrição do filme que assistiu.
+  Projeto onde trabalhei o Front End com ReactJS e Back End com Node.JS. Aplicação para acompanhar tudo que quiser assistir, você  pode criar sua conta no site e cadastrar notas onde pode colocar avaliação e descrição do filme que assistiu.
 </p>
-
-<br>
 
 <h2 id="features">🛠️ Funcionalidades</h2>
 
@@ -37,12 +35,14 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - ViteJS;
 - ReactJS;
+- Node.JS
 - Styled Components;
 - React Icons;
 - React Router;
-- Axios.
+- Axios
 - Netlify
 - Render
+- GitHub
 
 <h2 id="usage">💡 Utilização</h2>
 
