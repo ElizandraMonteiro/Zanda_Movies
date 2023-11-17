@@ -15,7 +15,6 @@
 </p>
 
 <br>
-<br>
 
 <h2 id="features">🛠️ Funcionalidades</h2>
 
@@ -42,6 +41,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - React Icons;
 - React Router;
 - Axios.
+- Netlify
+- Render
 
 <h2 id="usage">💡 Utilização</h2>
 
@@ -55,7 +56,8 @@ $ cd rocket-movies
 $ npm install
 $ npm run dev
 ```
-<br>
+⚠️ **Importante**: Este projeto está utilizando uma hospedagem gratuita para o seu backend, portanto, pode haver atrasos no tempo de resposta do servidor. 
+
 <br>
 
 ## 🔖 Layout
@@ -73,8 +75,6 @@ Página de Detalhes dos filmes:
 ![prewiew](06details.PNG)
 
 ---
-
-⚠️ **Importante**: Este projeto está utilizando uma hospedagem gratuita para o seu backend, portanto, pode haver atrasos no tempo de resposta do servidor. você pode acessa-lo através do link: 
 
 <h2 id="license">📝 Licença</h2>
 
