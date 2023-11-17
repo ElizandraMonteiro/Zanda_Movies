@@ -43,7 +43,18 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - React Router;
 - Axios.
 
+<h2 id="usage">💡 Utilização</h2>
 
+A aplicação Zânda Movies está disponível para utilização [aqui](https://zandamovies.netlify.app/).
+
+Você também pode instalá-la em sua máquina localmente. Para isso, clone o projeto, acesse a pasta, instale as dependências e inicie o servidor.
+
+```
+$ git clone https://github.com/ElizandraMonteiro/Zanda_Movies.git
+$ cd rocket-movies
+$ npm install
+$ npm run dev
+```
 <br>
 <br>
 
@@ -63,7 +74,7 @@ Página de Detalhes dos filmes:
 
 ---
 
-⚠️ **Importante**: Este projeto está utilizando uma hospedagem gratuita para o seu backend, portanto, pode haver atrasos no tempo de resposta do servidor.
+⚠️ **Importante**: Este projeto está utilizando uma hospedagem gratuita para o seu backend, portanto, pode haver atrasos no tempo de resposta do servidor. você pode acessa-lo através do link: 
 
 <h2 id="license">📝 Licença</h2>
 
