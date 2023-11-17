@@ -60,7 +60,7 @@ export function New() {
         );
       }
 
-      await api.post("/notes", {
+      await api.post("/movies", {
         title,
         description,
         rating,

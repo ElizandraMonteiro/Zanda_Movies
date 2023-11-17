@@ -21,7 +21,7 @@ export function Home() {
 
   useEffect(() => {
     async function fetchMovies() {
-      const response = await api.get(`/notes?title=${search}`);
+      const response = await api.get(`/movies?title=${search}`);
       console.log(response)
       setMovies(response.data);
     }

@@ -29,7 +29,7 @@ export function Details(){
 
   useEffect(() => {
     async function fetMovie(){
-      const response = await api.get(`/notes/${params.id}`);
+      const response = await api.get(`/movies/${params.id}`);
       setData(response.data);
 
     }
@@ -49,7 +49,7 @@ export function Details(){
     const confirm = window.confirm("Deseja realmente remover a nota?");
 
     if(confirm){
-      await api.delete(`/notes/${params.id}`);
+      await api.delete(`/movies/${params.id}`);
       navigate(-1);
     }
   }
